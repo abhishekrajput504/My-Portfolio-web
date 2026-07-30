@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: portfolio
+  mail:
+    host: ${SMTP_HOST:smtp.gmail.com}
+    port: ${SMTP_PORT:587}
+    username: ${SMTP_USERNAME:}
+    password: ${SMTP_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  cors:
+    allowed-origin: ${CORS_ALLOWED_ORIGIN:http://localhost:5173}
+  mail:
+    to: ${CONTACT_RECIPIENT_EMAIL:rupesh.ar33@gmail.com}
+    from: ${SMTP_USERNAME:no-reply@abhishekrajput.dev}
