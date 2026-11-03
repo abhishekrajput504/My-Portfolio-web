@@ -2,8 +2,6 @@ import type { ExperienceEntry } from '@/types/experience'
 
 /**
  * Companies, dates, and bullets come from the resume (public/resume/Abhishek_Rajput_Resume.pdf).
- * Role titles for UST Global / 7Edge and locations other than Energasia aren't on the resume — see
- * PLACEHOLDER_CONTENT.md.
  */
 export const experiences: ExperienceEntry[] = [
   {
@@ -31,10 +29,10 @@ export const experiences: ExperienceEntry[] = [
   },
   {
     id: 'exp-ust',
-    role: 'Java Developer', // PLACEHOLDER — confirm title
+    role: 'Software Developer 2 (SDE 2)',
     company: 'UST Global',
     companyUrl: undefined,
-    location: 'India',
+    location: 'Bengaluru, Karnataka, India',
     employmentType: 'Full-time',
     startDate: 'Mar 2025',
     endDate: 'Jul 2025',
@@ -55,7 +53,7 @@ export const experiences: ExperienceEntry[] = [
   },
   {
     id: 'exp-7edge',
-    role: 'Java Developer', // PLACEHOLDER — confirm title
+    role: 'Java Developer',
     company: '7Edge Pvt. Ltd.',
     companyUrl: undefined,
     location: 'Bengaluru, Karnataka, India',

@@ -54,8 +54,8 @@ export const education: EducationEntry[] = [
   {
     id: 'edu-mca',
     degree: 'Master of Computer Applications (MCA)',
-    institution: '', // PLACEHOLDER — add your university name
-    location: 'India',
+    institution: 'Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)',
+    location: 'Madhya Pradesh, India',
     startDate: '2020',
     endDate: '2022',
     detail: 'Postgraduate study in software engineering, databases, and application development.',

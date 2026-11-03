@@ -4,14 +4,12 @@ All site content (profile, experience, projects, skills, education) now follows 
 
 ## Photo
 
-`frontend/public/images/profile.webp` is your real headshot (resized to 900px wide and re-encoded as WebP — down from a 1.8MB source PNG to ~24KB, since it's the hero's likely LCP element), rendered in both the hero's glass photo card and the About section's photo card. If either loses the file it gracefully falls back to an "AR" monogram rather than a broken image. `HeroPhoto.tsx` (4:5) and `About.tsx` (1:1) both use `object-fit: cover` — swap the file or adjust `object-position` there for a different crop. If you replace it, re-compress (900px wide, WebP ~80% quality) rather than dropping in a multi-MB file straight from a camera/export.
+`frontend/public/images/profile.webp` is your real photo (`Downloads/My Profile Pic.jpg`), cropped to 4:5 around the face for the hero card, with a light colour/contrast touch-up, sharpening, and a soft vignette. Saved as 720×900 WebP (~60KB). If it fails to load, the hero falls back to an "AR" monogram.
 
 ## Content data (`frontend/src/data/`)
 
 | File | What to tighten |
 |---|---|
-| `profile.ts` | MCA university name is blank (`education[0].institution`) — not on the resume |
-| `experience.ts` | Role titles for UST Global and 7Edge are not on the resume (set to "Java Developer") — confirm. UST Global location set to "India" |
 | `certificates.ts` | Still sample data — the Certificates section is removed from `HomePage.tsx` and the nav. Add real certifications and re-enable it if you have any |
 | `projects.ts` | The six projects come from the resume. The problem/solution/architecture/challenges narrative expands on the resume bullets — review it |
 
