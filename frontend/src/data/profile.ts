@@ -27,7 +27,7 @@ export const profile = {
   currentCompany: 'Energasia Smart Poles Pvt. Ltd.',
   email: 'rupesh.ar33@gmail.com',
   socials: {
-    github: 'https://github.com/abhishek-rajput', // PLACEHOLDER — confirm real handle
+    github: 'https://github.com/abhishekrajput504',
     linkedin: 'https://www.linkedin.com/in/abhishek-rajput-1b999a184/',
     email: 'mailto:rupesh.ar33@gmail.com',
   },

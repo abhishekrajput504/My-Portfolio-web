@@ -10,7 +10,7 @@ All site content (profile, experience, projects, skills, education) now follows 
 
 | File | What to tighten |
 |---|---|
-| `profile.ts` | MCA university name is blank (`education[0].institution`) — not on the resume. `socials.github` — confirm your actual GitHub handle |
+| `profile.ts` | MCA university name is blank (`education[0].institution`) — not on the resume |
 | `experience.ts` | Role titles for UST Global and 7Edge are not on the resume (set to "Java Developer") — confirm. UST Global location set to "India" |
 | `certificates.ts` | Still sample data — the Certificates section is removed from `HomePage.tsx` and the nav. Add real certifications and re-enable it if you have any |
 | `projects.ts` | The six projects come from the resume. The problem/solution/architecture/challenges narrative expands on the resume bullets — review it |
@@ -41,4 +41,4 @@ The contact form won't deliver email until real SMTP credentials are set — see
 
 ## GitHub repository links
 
-`profile.ts` and `projects.ts` reference `https://github.com/abhishek-rajput/...` — confirm this is your actual handle, or update every occurrence.
+GitHub links point to `https://github.com/abhishekrajput504`. Projects are company work, so they have no repo links.
