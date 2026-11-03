@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography'
 import { motion } from 'framer-motion'
 import { FiArrowDown, FiArrowRight, FiDownload } from 'react-icons/fi'
 import { profile } from '@/data/profile'
+import { experiences } from '@/data/experience'
 import { AnimatedButton } from '@/components/AnimatedButton'
 import { SocialIcons } from '@/components/SocialIcons'
 import { scrollToSection } from '@/utils/scroll'
@@ -132,6 +133,32 @@ export function Hero() {
                 sx={{ pt: 1.5 }}
               >
                 <SocialIcons />
+              </Box>
+
+              <Box
+                component={motion.div}
+                initial={prefersReducedMotion ? undefined : { opacity: 0 }}
+                animate={prefersReducedMotion ? undefined : { opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                sx={{ pt: 2.5, borderTop: '1px solid rgba(255, 255, 255, 0.06)', maxWidth: 560 }}
+              >
+                <Typography
+                  variant="caption"
+                  sx={{ display: 'block', color: 'text.secondary', letterSpacing: '0.12em', textTransform: 'uppercase', mb: 1.25 }}
+                >
+                  Experience across
+                </Typography>
+                <Stack direction="row" sx={{ flexWrap: 'wrap', columnGap: 3, rowGap: 1 }}>
+                  {experiences.map((exp) => (
+                    <Typography
+                      key={exp.id}
+                      variant="body2"
+                      sx={{ fontWeight: 600, color: exp.current ? 'text.primary' : 'rgba(245, 245, 247, 0.62)' }}
+                    >
+                      {exp.company.replace(/ (Pvt\.|Smart Poles).*$/, '')}
+                    </Typography>
+                  ))}
+                </Stack>
               </Box>
             </Stack>
           </Grid>

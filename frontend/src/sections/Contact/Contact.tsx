@@ -20,7 +20,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title="Let's build something reliable"
-          subtitle="Open to backend, full-stack, and IoT roles. The fastest way to reach me is the form below or a direct email."
+          subtitle="Open to Java backend, Spring Boot, and microservices roles. The fastest way to reach me is the form below or a direct email."
         />
 
         <Grid container spacing={{ xs: 5, md: 8 }}>

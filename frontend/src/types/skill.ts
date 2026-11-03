@@ -24,18 +24,17 @@ export type SkillIconKey =
   | 'snyk'
   | 'security'
   | 'arduino'
+  | 'vscode'
   | 'agile'
-  | 'problemSolving'
 
 export interface Skill {
   name: string
   icon: SkillIconKey
-  /** Proficiency out of 100, rendered as a progress indicator. */
-  level: number
 }
 
 export interface SkillCategory {
   id: string
   title: string
+  description: string
   skills: Skill[]
 }

@@ -3,7 +3,7 @@ import type { Project } from '@/types/project'
 /**
  * Projects are the systems described on the resume (public/resume/Abhishek_Rajput_Resume.pdf).
  * Feature lists and tech stacks come straight from it; the problem/solution/architecture/challenges
- * narrative is a reasonable expansion — review and tighten. Cover images are abstract placeholders.
+ * narrative is a reasonable expansion — review and tighten. Cover images are architecture diagrams generated per project.
  * These are company projects, so no public repo/demo links. See PLACEHOLDER_CONTENT.md.
  */
 export const projects: Project[] = [
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     challenges: [
       'Coordinating real-time broadcast commands with hardware at the edge — handled by separating scheduling and broadcast concerns into dedicated services',
     ],
-    image: '/images/projects/iot-dashboard.svg',
+    image: '/images/projects/pa-audio-system.svg',
     githubUrl: undefined,
     liveUrl: undefined,
     featured: true,
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     challenges: [
       'Balancing a high-volume log store with relational records — solved by splitting workloads between MongoDB and MySQL',
     ],
-    image: '/images/projects/inventory-platform.svg',
+    image: '/images/projects/jail-monitoring-system.svg',
     githubUrl: undefined,
     liveUrl: undefined,
     featured: true,
@@ -102,11 +102,11 @@ export const projects: Project[] = [
       'Optimized data access via Hibernate JPA',
       'RESTful APIs for portal modules',
     ],
-    architecture: 'Portal frontend → Spring Boot REST APIs → Hibernate JPA → MySQL; files stored in AWS S3.',
+    architecture: 'Portal UI → Spring Boot REST APIs → Hibernate JPA → MySQL; files stored in AWS S3.',
     techStack: ['Java', 'Spring Boot', 'Hibernate JPA', 'AWS S3', 'MySQL', 'REST APIs'],
     businessImpact: ['Delivered the enterprise portal end to end, from an empty repository to production'],
     challenges: ['Keeping file storage secure — handled by storing files in AWS S3 rather than on application servers'],
-    image: '/images/projects/portfolio-api.svg',
+    image: '/images/projects/energasia-portal.svg',
     githubUrl: undefined,
     liveUrl: undefined,
     featured: true,
@@ -139,7 +139,7 @@ export const projects: Project[] = [
     techStack: ['Java', 'Spring Boot', 'Hibernate JPA', 'REST APIs', 'MySQL', 'Payment Gateway'],
     businessImpact: ['Patients can self-serve appointment booking, rescheduling, and cancellation'],
     challenges: ['Preventing double-booked appointments — handled with time-slot management per doctor'],
-    image: '/images/projects/inventory-platform.svg',
+    image: '/images/projects/hospital-management-system.svg',
     githubUrl: undefined,
     liveUrl: undefined,
     featured: false,
@@ -170,7 +170,7 @@ export const projects: Project[] = [
     techStack: ['Java 8', 'Spring Boot', 'Hibernate JPA', 'JPQL', 'iTextPDF', 'MySQL', 'REST APIs'],
     businessImpact: ['End-to-end booking flow from search to payment to a downloadable PDF ticket'],
     challenges: ['Securing account access — solved with Email OTP verification on sign-up and sign-in'],
-    image: '/images/projects/portfolio-api.svg',
+    image: '/images/projects/hotel-booking-platform.svg',
     githubUrl: undefined,
     liveUrl: undefined,
     featured: false,
@@ -199,7 +199,7 @@ export const projects: Project[] = [
     techStack: ['Java', 'Spring Boot', 'Spring Data JPA', 'Hibernate', 'MySQL'],
     businessImpact: ['Flexible multi-criteria property search for buyers'],
     challenges: ['Supporting many optional filter combinations — handled with dynamic query building'],
-    image: '/images/projects/iot-dashboard.svg',
+    image: '/images/projects/property-listing-platform.svg',
     githubUrl: undefined,
     liveUrl: undefined,
     featured: false,

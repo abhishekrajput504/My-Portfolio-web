@@ -22,7 +22,8 @@ import {
   SiSnyk,
   SiArduino,
 } from 'react-icons/si'
-import { FiBox, FiServer, FiShield, FiRepeat, FiTarget } from 'react-icons/fi'
+import { VscVscode } from 'react-icons/vsc'
+import { FiBox, FiServer, FiShield, FiRepeat } from 'react-icons/fi'
 import type { SkillIconKey } from '@/types/skill'
 
 export const iconRegistry: Record<SkillIconKey, IconType> = {
@@ -50,6 +51,6 @@ export const iconRegistry: Record<SkillIconKey, IconType> = {
   snyk: SiSnyk,
   security: FiShield,
   arduino: SiArduino,
+  vscode: VscVscode,
   agile: FiRepeat,
-  problemSolving: FiTarget,
 }

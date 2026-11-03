@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
-import Stack from '@mui/material/Stack'
+import Grid from '@mui/material/Grid'
 import { skillCategories } from '@/data/skills'
 import { SectionHeading } from '@/components/SectionHeading'
 import { SECTION_IDS } from '@/utils/constants'
@@ -13,14 +13,16 @@ export function Skills() {
       <Container maxWidth="lg">
         <SectionHeading
           eyebrow="Skills"
-          title="Tools I reach for"
-          subtitle="A backend-first toolkit, with enough frontend and infrastructure fluency to ship a feature end to end."
+          title="Technical toolkit"
+          subtitle="A Java and Spring-centred toolkit for building, testing, securing, and shipping backend services."
         />
-        <Stack spacing={4}>
+        <Grid container spacing={3}>
           {skillCategories.map((category, index) => (
-            <SkillCategory key={category.id} category={category} delay={index * 0.08} />
+            <Grid key={category.id} size={{ xs: 12, sm: 6, md: 4 }}>
+              <SkillCategory category={category} delay={(index % 3) * 0.08} />
+            </Grid>
           ))}
-        </Stack>
+        </Grid>
       </Container>
     </Box>
   )

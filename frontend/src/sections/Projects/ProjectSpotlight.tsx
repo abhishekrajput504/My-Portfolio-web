@@ -39,7 +39,7 @@ export function ProjectSpotlight({ project }: ProjectSpotlightProps) {
               position: 'relative',
               height: '100%',
               minHeight: { xs: 240, md: 340 },
-              backgroundColor: '#0C0C0F',
+              backgroundColor: '#101014',
               overflow: 'hidden',
               cursor: 'pointer',
             }}
@@ -47,7 +47,7 @@ export function ProjectSpotlight({ project }: ProjectSpotlightProps) {
             <LazyImage
               src={project.image}
               alt={`${project.title} preview`}
-              sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }}
             />
           </Box>
         </Grid>

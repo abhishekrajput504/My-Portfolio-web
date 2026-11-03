@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B0B0F"/><stop offset="100%" stop-color="#14141A"/></linearGradient>
+<radialGradient id="halo" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#3B82F6" stop-opacity="0.10"/><stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(59,130,246,0.06)" stroke-width="1"/></pattern>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3B82F6"/></marker>
+<marker id="arrowDim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#52525B"/></marker>
+</defs>
+<rect width="1200" height="750" fill="url(#bg)"/><rect width="1200" height="750" fill="url(#grid)"/><rect width="1200" height="750" fill="url(#halo)"/>
+<text x="80" y="124" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="600">Energasia Enterprise Portal</text>
+<path d="M280 330 C330 330 330 330 380 330" stroke="rgba(59,130,246,0.5)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<circle cx="280" cy="330" r="3" fill="#3B82F6"/>
+<rect x="303" y="319" width="54" height="22" rx="11" fill="#0B0B0F" stroke="rgba(59,130,246,0.3)"/><text x="330" y="334" text-anchor="middle" fill="#60A5FA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">HTTPS</text>
+<path d="M600 330 C650 330 650 330 700 330" stroke="rgba(59,130,246,0.5)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<circle cx="600" cy="330" r="3" fill="#3B82F6"/>
+<path d="M900 330 C940 330 940 330 980 330" stroke="rgba(59,130,246,0.5)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<circle cx="900" cy="330" r="3" fill="#3B82F6"/>
+<path d="M490 370 C490 435 490 435 490 500" stroke="rgba(59,130,246,0.5)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<circle cx="490" cy="370" r="3" fill="#3B82F6"/>
+<rect x="463" y="424" width="54" height="22" rx="11" fill="#0B0B0F" stroke="rgba(59,130,246,0.3)"/><text x="490" y="439" text-anchor="middle" fill="#60A5FA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">files</text>
+<rect x="80" y="290" width="200" height="80" rx="10" fill="#111113" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+<text x="180" y="327" text-anchor="middle" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="600">Portal UI</text>
+<text x="180" y="348" text-anchor="middle" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">enterprise users</text>
+<rect x="376" y="286" width="228" height="88" rx="14" fill="none" stroke="rgba(59,130,246,0.12)" stroke-width="6"/><rect x="380" y="290" width="220" height="80" rx="10" fill="#16161B" stroke="rgba(59,130,246,0.55)" stroke-width="1.5"/>
+<text x="490" y="327" text-anchor="middle" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="600">REST API</text>
+<text x="490" y="348" text-anchor="middle" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">Spring Boot</text>
+<rect x="700" y="290" width="200" height="80" rx="10" fill="#111113" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+<text x="800" y="327" text-anchor="middle" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="600">Hibernate JPA</text>
+<text x="800" y="348" text-anchor="middle" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">optimized queries</text>
+<rect x="980" y="290" width="150" height="80" rx="10" fill="#111113" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/><path d="M996 302 h118" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+<text x="1055" y="327" text-anchor="middle" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="600">MySQL</text>
+<text x="1055" y="348" text-anchor="middle" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">relational</text>
+<rect x="380" y="500" width="220" height="80" rx="10" fill="#111113" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/><path d="M396 512 h188" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+<text x="490" y="537" text-anchor="middle" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="600">AWS S3</text>
+<text x="490" y="558" text-anchor="middle" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">secure file storage</text>
+<text x="80" y="700" fill="#3B82F6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600">// energasia-portal</text>
+</svg>

@@ -18,7 +18,7 @@ All site content (profile, experience, projects, skills, education) now follows 
 | File | Action |
 |---|---|
 | `frontend/public/resume/Abhishek_Rajput_Resume.pdf` | Real resume. The hero "Download Resume" button downloads it directly. To update it, replace the file and keep the same filename |
-| `frontend/public/images/projects/*.svg` | Abstract architecture-diagram cover art standing in for real screenshots — swap for actual product/dashboard screenshots when available |
+| `frontend/public/images/projects/*.svg` | One architecture diagram per project, named by project slug. Swap for real screenshots if you have any that are safe to share |
 | `frontend/public/favicon.svg` | Simple "AR" monogram mark, works as-is. For full social/OG compatibility generate PNG/ICO variants (e.g. realfavicongenerator.io) |
 | `frontend/public/og-image.png` | **Missing** — referenced by `index.html`/`SeoHead.tsx` for social share previews. Add a 1200×630 PNG before relying on link-preview cards on Twitter/LinkedIn |
 

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B0B0F"/><stop offset="100%" stop-color="#14141A"/></linearGradient>
+<radialGradient id="halo" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#3B82F6" stop-opacity="0.10"/><stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(59,130,246,0.06)" stroke-width="1"/></pattern>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3B82F6"/></marker>
+<marker id="arrowDim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#52525B"/></marker>
+</defs>
+<rect width="1200" height="750" fill="url(#bg)"/><rect width="1200" height="750" fill="url(#grid)"/><rect width="1200" height="750" fill="url(#halo)"/>
+<text x="80" y="124" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="600">Jail Monitoring System</text>
+<path d="M300 370 C395 370 395 370 490 370" stroke="rgba(59,130,246,0.5)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<circle cx="300" cy="370" r="3" fill="#3B82F6"/>
+<rect x="339.2" y="359" width="111.60000000000001" height="22" rx="11" fill="#0B0B0F" stroke="rgba(59,130,246,0.3)"/><text x="395" y="374" text-anchor="middle" fill="#60A5FA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">feed tracking</text>
+<path d="M710 370 C805 370 805 260 900 260" stroke="rgba(59,130,246,0.5)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<circle cx="710" cy="370" r="3" fill="#3B82F6"/>
+<rect x="781.6" y="304" width="46.8" height="22" rx="11" fill="#0B0B0F" stroke="rgba(59,130,246,0.3)"/><text x="805" y="319" text-anchor="middle" fill="#60A5FA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">logs</text>
+<path d="M710 370 C805 370 805 480 900 480" stroke="rgba(59,130,246,0.5)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<circle cx="710" cy="370" r="3" fill="#3B82F6"/>
+<rect x="770.8" y="414" width="68.4" height="22" rx="11" fill="#0B0B0F" stroke="rgba(59,130,246,0.3)"/><text x="805" y="429" text-anchor="middle" fill="#60A5FA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">records</text>
+<path d="M600 540 C600 475 600 475 600 410" stroke="rgba(255,255,255,0.22)" stroke-width="1.6" fill="none" stroke-dasharray="5 6" marker-end="url(#arrowDim)"/>
+<circle cx="600" cy="540" r="3" fill="#52525B"/>
+<rect x="80" y="330" width="220" height="80" rx="10" fill="#111113" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+<text x="190" y="367" text-anchor="middle" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="600">CCTV Cameras</text>
+<text x="190" y="388" text-anchor="middle" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">feed events</text>
+<rect x="486" y="326" width="228" height="88" rx="14" fill="none" stroke="rgba(59,130,246,0.12)" stroke-width="6"/><rect x="490" y="330" width="220" height="80" rx="10" fill="#16161B" stroke="rgba(59,130,246,0.55)" stroke-width="1.5"/>
+<text x="600" y="367" text-anchor="middle" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="600">Monitoring Service</text>
+<text x="600" y="388" text-anchor="middle" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">Spring Boot</text>
+<rect x="900" y="220" width="220" height="80" rx="10" fill="#111113" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/><path d="M916 232 h188" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+<text x="1010" y="257" text-anchor="middle" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="600">MongoDB</text>
+<text x="1010" y="278" text-anchor="middle" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">real-time logs</text>
+<rect x="900" y="440" width="220" height="80" rx="10" fill="#111113" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/><path d="M916 452 h188" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+<text x="1010" y="477" text-anchor="middle" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="600">MySQL</text>
+<text x="1010" y="498" text-anchor="middle" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">isolated records</text>
+<rect x="490" y="540" width="220" height="80" rx="10" fill="#111113" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+<text x="600" y="577" text-anchor="middle" fill="#F5F5F7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="600">Snyk · Black Duck</text>
+<text x="600" y="598" text-anchor="middle" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">dependency scanning</text>
+<text x="80" y="700" fill="#3B82F6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600">// jail-monitoring-system</text>
+</svg>
