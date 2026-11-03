@@ -10,6 +10,7 @@ type AnimatedButtonProps = Omit<
 > & {
   target?: string
   rel?: string
+  download?: string | boolean
 }
 
 /** MUI Button with a restrained hover/tap micro-interaction; no-ops under reduced-motion. */

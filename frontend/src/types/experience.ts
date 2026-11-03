@@ -4,11 +4,14 @@ export interface ExperienceEntry {
   company: string
   companyUrl?: string
   location: string
+  employmentType: string
   startDate: string
   endDate: string
+  current: boolean
   summary: string
+  /** Quantified business impact — lead with these, not task lists. */
+  impact: string[]
   responsibilities: string[]
-  achievements: string[]
   technologies: string[]
 }
 

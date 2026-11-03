@@ -8,7 +8,6 @@ import { About } from '@/sections/About/About'
 import { Skills } from '@/sections/Skills/Skills'
 import { Projects } from '@/sections/Projects/Projects'
 import { Experience } from '@/sections/Experience/Experience'
-import { Certificates } from '@/sections/Certificates/Certificates'
 import { Contact } from '@/sections/Contact/Contact'
 import { scrollToSection } from '@/utils/scroll'
 
@@ -26,7 +25,7 @@ export function HomePage() {
   return (
     <Layout>
       <SeoHead
-        title={`${profile.name} — ${profile.currentRole} & Spring Boot Developer`}
+        title={`${profile.name} — Java Backend Developer & Application Engineer`}
         description={profile.tagline}
         path="/"
       />
@@ -35,7 +34,6 @@ export function HomePage() {
       <Skills />
       <Projects />
       <Experience />
-      <Certificates />
       <Contact />
     </Layout>
   )

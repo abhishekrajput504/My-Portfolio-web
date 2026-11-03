@@ -1,47 +1,100 @@
 import type { ExperienceEntry } from '@/types/experience'
 
-/** PLACEHOLDER — replace with real employment history. See PLACEHOLDER_CONTENT.md. */
+/**
+ * Companies, dates, and bullets come from the resume (public/resume/Abhishek_Rajput_Resume.pdf).
+ * Role titles for UST Global / 7Edge and locations other than Energasia aren't on the resume — see
+ * PLACEHOLDER_CONTENT.md.
+ */
 export const experiences: ExperienceEntry[] = [
   {
-    id: 'exp-1',
-    role: 'Backend Engineer',
-    company: 'TechNova Systems',
+    id: 'exp-energasia',
+    role: 'Application Engineer',
+    company: 'Energasia Smart Poles Pvt. Ltd.',
     companyUrl: undefined,
-    location: 'Pune, India',
-    startDate: 'Jun 2023',
+    location: 'New Delhi, India',
+    employmentType: 'Full-time',
+    startDate: 'Jan 2026',
     endDate: 'Present',
+    current: true,
     summary:
-      'Own backend services for a multi-tenant SaaS platform, focused on API reliability, data integrity, and internal developer tooling.',
+      'Building backend microservices, enterprise portals, and IoT integrations for smart-city systems — from real-time PA audio broadcasting to secure jail monitoring.',
+    impact: [
+      'Designed and developed backend microservices using Java 8 and Spring Boot for an integrated Public Address (PA) Audio System, enabling real-time audio broadcasting and scheduling',
+      'Developed a highly secure Jail Monitoring System leveraging MongoDB and MySQL for robust real-time logs, CCTV feed tracking, and data isolation',
+      'Built the enterprise Energasia Portal from scratch, integrating AWS S3 for secure file storage and optimizing database interactions via Hibernate JPA',
+    ],
     responsibilities: [
-      'Designed and maintained REST APIs powering the core product using Spring Boot and MySQL',
-      'Introduced structured logging and health checks that cut mean-time-to-diagnosis for production incidents',
-      'Migrated a monolithic module into an independently deployable microservice',
-      'Set up CI pipelines and Dockerized deployment for the service tier',
+      'Configured Arduino Uno and deployed edge-level code via Arduino IDE to interface smart hardware sensors with cloud infrastructure',
+      'Integrated continuous security scanning using Snyk and Black Duck to eliminate open-source vulnerabilities in code dependencies',
     ],
-    achievements: [
-      'Reduced p95 API latency by 38% by fixing N+1 queries and adding targeted caching',
-      'Led the rollout of Spring Security-based role authorization across 4 internal services',
-    ],
-    technologies: ['Java', 'Spring Boot', 'Spring Security', 'MySQL', 'Docker', 'AWS', 'Nginx'],
+    technologies: ['Java 8', 'Spring Boot', 'Microservices', 'Hibernate JPA', 'MySQL', 'MongoDB', 'AWS S3', 'Arduino', 'Snyk', 'Black Duck'],
   },
   {
-    id: 'exp-2',
-    role: 'IoT & Software Engineering Intern',
-    company: 'Circuit & Cloud Labs',
+    id: 'exp-ust',
+    role: 'Java Developer', // PLACEHOLDER — confirm title
+    company: 'UST Global',
     companyUrl: undefined,
-    location: 'Remote',
-    startDate: 'Jan 2023',
-    endDate: 'May 2023',
+    location: 'India',
+    employmentType: 'Full-time',
+    startDate: 'Mar 2025',
+    endDate: 'Jul 2025',
+    current: false,
     summary:
-      'Built the ingestion pipeline connecting ESP8266-based sensor nodes to a Spring Boot backend over MQTT.',
+      'Backend development for a hospital management system covering patients, appointments, doctors, staff, billing, payments, and inventory.',
+    impact: [
+      'Maintained patient profiles including personal details, medical history, and treatment records',
+      'Enabled patients to book, reschedule, or cancel appointments with doctors, backed by time-slot management',
+      'Integrated payment gateways for online transactions',
+    ],
     responsibilities: [
-      'Programmed ESP8266 firmware to publish sensor telemetry over MQTT',
-      'Built a Spring Boot MQTT consumer and REST layer to persist and expose device data',
-      'Created a lightweight React dashboard to visualize live device telemetry',
+      'Managed doctor schedules, specialties, and availability, plus staff details for nurses and administrative personnel',
+      'Generated bills for treatments, lab tests, and medications',
+      'Tracked and managed stock of medicines and hospital supplies',
     ],
-    achievements: [
-      'Delivered a working end-to-end IoT pipeline (device → broker → backend → dashboard) within an 8-week internship',
+    technologies: ['Java', 'Spring Boot', 'Hibernate JPA', 'REST APIs', 'MySQL', 'Payment Gateway'],
+  },
+  {
+    id: 'exp-7edge',
+    role: 'Java Developer', // PLACEHOLDER — confirm title
+    company: '7Edge Pvt. Ltd.',
+    companyUrl: undefined,
+    location: 'Bengaluru, Karnataka, India',
+    employmentType: 'Full-time',
+    startDate: 'Sep 2023',
+    endDate: 'Feb 2025',
+    current: false,
+    summary:
+      'Built RESTful web services for a hotel booking platform — authentication, search, reviews, bookings, PDF tickets, and payments.',
+    impact: [
+      'Developed Sign-Up and Sign-In modules with Email OTP verification and authentication',
+      'Implemented booking functionality with PDF ticket generation using iTextPDF and integrated payment gateway services',
     ],
-    technologies: ['Java', 'Spring Boot', 'MQTT', 'ESP8266', 'React', 'REST APIs'],
+    responsibilities: [
+      'Analyzed project requirements and ER diagrams and developed RESTful web services using Java 8 and Spring Boot',
+      'Developed Hotel, Search, User, Review, and Booking modules with CRUD operations and JPQL queries using Hibernate/JPA',
+    ],
+    technologies: ['Java 8', 'Spring Boot', 'Hibernate JPA', 'JPQL', 'REST APIs', 'iTextPDF', 'MySQL'],
+  },
+  {
+    id: 'exp-nobroker',
+    role: 'Java Developer Intern',
+    company: 'NoBroker Technologies',
+    companyUrl: undefined,
+    location: 'Bengaluru, Karnataka, India',
+    employmentType: 'Internship',
+    startDate: 'Feb 2023',
+    endDate: 'Aug 2023',
+    current: false,
+    summary:
+      'Backend for a property platform — property listings, buyer/seller/admin users, transactions, and role-based API access.',
+    impact: [
+      'Implemented role-based access control to restrict access to APIs for buyer, seller, and admin roles',
+      'Developed dynamic queries for filtering properties by location, price range, property type, and amenities',
+    ],
+    responsibilities: [
+      'Modelled Property, User, and Transaction (payments, bookings, inquiries) entities',
+      'Used Spring Data JPA with Hibernate for ORM',
+    ],
+    technologies: ['Java', 'Spring Boot', 'Spring Data JPA', 'Hibernate', 'MySQL'],
   },
 ]

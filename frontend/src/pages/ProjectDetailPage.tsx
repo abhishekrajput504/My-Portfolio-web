@@ -6,7 +6,16 @@ import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import Divider from '@mui/material/Divider'
-import { FiArrowLeft, FiGithub, FiExternalLink, FiCheck } from 'react-icons/fi'
+import {
+  FiArrowLeft,
+  FiGithub,
+  FiExternalLink,
+  FiCheck,
+  FiAlertCircle,
+  FiCheckCircle,
+  FiTrendingUp,
+  FiAlertTriangle,
+} from 'react-icons/fi'
 import { Layout } from '@/layout/Layout'
 import { SeoHead } from '@/components/SeoHead'
 import { RevealOnScroll } from '@/components/RevealOnScroll'
@@ -15,6 +24,40 @@ import { AnimatedButton } from '@/components/AnimatedButton'
 import { GlassCard } from '@/components/GlassCard'
 import { projects } from '@/data/projects'
 import { layout } from '@/theme/tokens'
+
+interface DetailSectionProps {
+  icon: typeof FiAlertCircle
+  title: string
+  items: string[]
+  accent?: boolean
+}
+
+function DetailSection({ icon: Icon, title, items, accent = false }: DetailSectionProps) {
+  return (
+    <RevealOnScroll>
+      <Box sx={{ mb: 5 }}>
+        <Stack direction="row" spacing={1.25} sx={{ alignItems: 'center', mb: 2 }}>
+          <Icon size={16} color={accent ? '#60A5FA' : '#71717A'} />
+          <Typography variant="h4" sx={{ fontSize: '1.25rem' }}>
+            {title}
+          </Typography>
+        </Stack>
+        <Stack spacing={1.5}>
+          {items.map((item) => (
+            <Stack key={item} direction="row" spacing={1.5} sx={{ alignItems: 'flex-start' }}>
+              <Box sx={{ color: accent ? 'primary.light' : 'text.secondary', mt: 0.4, flexShrink: 0 }}>
+                <FiCheck size={13} />
+              </Box>
+              <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+                {item}
+              </Typography>
+            </Stack>
+          ))}
+        </Stack>
+      </Box>
+    </RevealOnScroll>
+  )
+}
 
 export function ProjectDetailPage() {
   const { slug } = useParams()
@@ -96,7 +139,7 @@ export function ProjectDetailPage() {
           <Grid container spacing={{ xs: 6, md: 8 }}>
             <Grid size={{ xs: 12, md: 8 }}>
               <RevealOnScroll>
-                <Typography variant="h4" sx={{ mb: 2 }}>
+                <Typography variant="h4" sx={{ mb: 2, fontSize: '1.25rem' }}>
                   Overview
                 </Typography>
                 <Stack spacing={2} sx={{ mb: 5 }}>
@@ -108,29 +151,14 @@ export function ProjectDetailPage() {
                 </Stack>
               </RevealOnScroll>
 
-              <RevealOnScroll>
-                <Typography variant="h4" sx={{ mb: 2 }}>
-                  Key features
-                </Typography>
-                <Stack spacing={1.5} sx={{ mb: 5 }}>
-                  {project.features.map((feature) => (
-                    <Stack key={feature} direction="row" spacing={1.5} sx={{ alignItems: 'flex-start' }}>
-                      <Box sx={{ color: 'primary.light', mt: 0.4, flexShrink: 0 }}>
-                        <FiCheck size={14} />
-                      </Box>
-                      <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-                        {feature}
-                      </Typography>
-                    </Stack>
-                  ))}
-                </Stack>
-              </RevealOnScroll>
+              <DetailSection icon={FiAlertCircle} title="Problem" items={project.problem} />
+              <DetailSection icon={FiCheckCircle} title="Solution" items={project.solution} accent />
 
               <RevealOnScroll>
-                <Typography variant="h4" sx={{ mb: 2 }}>
+                <Typography variant="h4" sx={{ mb: 2, fontSize: '1.25rem' }}>
                   Architecture
                 </Typography>
-                <GlassCard sx={{ p: 3 }}>
+                <GlassCard sx={{ p: 3, mb: 5 }}>
                   <Typography
                     variant="body2"
                     sx={{ color: 'text.secondary', fontFamily: 'fontFamilyMono', lineHeight: 1.8 }}
@@ -139,6 +167,36 @@ export function ProjectDetailPage() {
                   </Typography>
                 </GlassCard>
               </RevealOnScroll>
+
+              <DetailSection icon={FiCheck} title="Key features" items={project.features} />
+
+              <RevealOnScroll>
+                <Box
+                  sx={{
+                    mb: 5,
+                    p: 3,
+                    borderRadius: 2,
+                    backgroundColor: 'rgba(59, 130, 246, 0.05)',
+                    border: '1px solid rgba(59, 130, 246, 0.15)',
+                  }}
+                >
+                  <Stack direction="row" spacing={1.25} sx={{ alignItems: 'center', mb: 2 }}>
+                    <FiTrendingUp size={16} color="#60A5FA" />
+                    <Typography variant="h4" sx={{ fontSize: '1.25rem', color: 'primary.light' }}>
+                      Business impact
+                    </Typography>
+                  </Stack>
+                  <Stack spacing={1}>
+                    {project.businessImpact.map((item) => (
+                      <Typography key={item} variant="body1" sx={{ color: 'text.primary' }}>
+                        → {item}
+                      </Typography>
+                    ))}
+                  </Stack>
+                </Box>
+              </RevealOnScroll>
+
+              <DetailSection icon={FiAlertTriangle} title="Challenges" items={project.challenges} />
             </Grid>
 
             <Grid size={{ xs: 12, md: 4 }}>
@@ -154,7 +212,7 @@ export function ProjectDetailPage() {
                   </Stack>
                   <Divider sx={{ my: 3 }} />
                   <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    {project.featured ? 'Featured project' : 'Side project'}
+                    {project.featured ? 'Featured project' : 'Professional project'}
                   </Typography>
                 </GlassCard>
               </RevealOnScroll>

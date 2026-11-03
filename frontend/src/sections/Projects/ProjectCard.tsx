@@ -7,7 +7,7 @@ import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import { FiGithub, FiExternalLink, FiArrowUpRight } from 'react-icons/fi'
+import { FiGithub, FiExternalLink, FiArrowUpRight, FiTrendingUp } from 'react-icons/fi'
 import type { Project } from '@/types/project'
 import { LazyImage } from '@/components/LazyImage'
 import { radius, transition } from '@/theme/tokens'
@@ -118,6 +118,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <Chip key={tech} label={tech} size="small" />
           ))}
         </Stack>
+
+        {project.businessImpact[0] && (
+          <Stack direction="row" spacing={1} sx={{ alignItems: 'flex-start', mb: 2.5 }}>
+            <Box sx={{ color: 'primary.light', mt: 0.3, flexShrink: 0 }}>
+              <FiTrendingUp size={13} />
+            </Box>
+            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+              {project.businessImpact[0]}
+            </Typography>
+          </Stack>
+        )}
 
         <Typography
           className="project-cta"

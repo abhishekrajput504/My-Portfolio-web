@@ -1,53 +1,84 @@
 import type { SkillCategory } from '@/types/skill'
 
+/** Mirrors the Technical Skills section of the resume. */
 export const skillCategories: SkillCategory[] = [
   {
-    id: 'backend',
-    title: 'Backend',
+    id: 'languages',
+    title: 'Languages',
     skills: [
-      { name: 'Java', icon: 'java' },
-      { name: 'Spring Boot', icon: 'spring' },
-      { name: 'Spring Security', icon: 'security' },
-      { name: 'Hibernate', icon: 'hibernate' },
-      { name: 'Microservices', icon: 'microservices' },
-      { name: 'REST APIs', icon: 'api' },
-      { name: 'MySQL', icon: 'mysql' },
+      { name: 'Core Java', icon: 'java', level: 92 },
+      { name: 'Java 8 & 17', icon: 'openjdk', level: 88 },
+      { name: 'HTML', icon: 'html', level: 70 },
     ],
   },
   {
-    id: 'frontend',
-    title: 'Frontend',
+    id: 'frameworks',
+    title: 'Frameworks',
     skills: [
-      { name: 'React', icon: 'react' },
-      { name: 'JavaScript', icon: 'javascript' },
-      { name: 'TypeScript', icon: 'typescript' },
-      { name: 'Material UI', icon: 'mui' },
+      { name: 'Spring Boot', icon: 'spring', level: 90 },
+      { name: 'Spring MVC', icon: 'springFramework', level: 85 },
+      { name: 'Hibernate JPA', icon: 'hibernate', level: 86 },
+      { name: 'RESTful APIs', icon: 'api', level: 90 },
+      { name: 'Microservices', icon: 'microservices', level: 80 },
     ],
   },
   {
-    id: 'devops',
-    title: 'DevOps & Cloud',
+    id: 'databases',
+    title: 'Databases',
     skills: [
-      { name: 'Docker', icon: 'docker' },
-      { name: 'Git', icon: 'git' },
-      { name: 'GitHub', icon: 'github' },
-      { name: 'Linux', icon: 'linux' },
-      { name: 'Nginx', icon: 'nginx' },
-      { name: 'AWS', icon: 'aws' },
+      { name: 'MySQL', icon: 'mysql', level: 85 },
+      { name: 'MongoDB', icon: 'mongodb', level: 72 },
+    ],
+  },
+  {
+    id: 'cloud',
+    title: 'Cloud',
+    skills: [{ name: 'AWS S3', icon: 'aws', level: 70 }],
+  },
+  {
+    id: 'build',
+    title: 'Build & Version Control',
+    skills: [
+      { name: 'Maven', icon: 'maven', level: 82 },
+      { name: 'Gradle', icon: 'gradle', level: 68 },
+      { name: 'Git', icon: 'git', level: 85 },
+      { name: 'GitHub', icon: 'github', level: 85 },
+      { name: 'GitLab', icon: 'gitlab', level: 78 },
+    ],
+  },
+  {
+    id: 'tools',
+    title: 'Developer & Testing Tools',
+    skills: [
+      { name: 'IntelliJ IDEA', icon: 'intellij', level: 85 },
+      { name: 'Eclipse / STS-4', icon: 'eclipse', level: 82 },
+      { name: 'Postman', icon: 'postman', level: 88 },
+      { name: 'Swagger', icon: 'swagger', level: 80 },
+      { name: 'Jira', icon: 'jira', level: 80 },
+    ],
+  },
+  {
+    id: 'security',
+    title: 'Security Scanning',
+    skills: [
+      { name: 'Snyk', icon: 'snyk', level: 72 },
+      { name: 'Black Duck', icon: 'security', level: 68 },
     ],
   },
   {
     id: 'iot',
-    title: 'IoT',
+    title: 'Embedded / IoT',
     skills: [
-      { name: 'IoT Systems', icon: 'iot' },
-      { name: 'ESP8266', icon: 'esp8266' },
-      { name: 'MQTT', icon: 'mqtt' },
+      { name: 'Arduino UNO', icon: 'arduino', level: 72 },
+      { name: 'Arduino IDE', icon: 'arduino', level: 72 },
     ],
   },
   {
-    id: 'craft',
-    title: 'Engineering Craft',
-    skills: [{ name: 'Problem Solving', icon: 'problemSolving' }],
+    id: 'practices',
+    title: 'Practices',
+    skills: [
+      { name: 'Agile Methodology', icon: 'agile', level: 85 },
+      { name: 'Problem Solving', icon: 'problemSolving', level: 90 },
+    ],
   },
 ]

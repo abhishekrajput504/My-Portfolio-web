@@ -16,9 +16,14 @@ export function Experience() {
           title="Where I've worked"
           subtitle="Roles that shaped how I think about reliability, ownership, and shipping software that lasts."
         />
-        <Stack spacing={4}>
+        <Stack spacing={0}>
           {experiences.map((experience, index) => (
-            <ExperienceItem key={experience.id} experience={experience} delay={index * 0.1} />
+            <ExperienceItem
+              key={experience.id}
+              experience={experience}
+              isLast={index === experiences.length - 1}
+              delay={index * 0.1}
+            />
           ))}
         </Stack>
       </Container>

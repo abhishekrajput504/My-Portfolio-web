@@ -12,7 +12,7 @@ import com.abhishekrajput.portfolio.service.ContactService;
 
 import jakarta.validation.Valid;
 
-@RestController
+@RestController 
 public class ContactController {
 
 	private final ContactService contactService;

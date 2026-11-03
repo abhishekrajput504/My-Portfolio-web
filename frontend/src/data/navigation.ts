@@ -8,6 +8,5 @@ export const navLinks: NavLink[] = [
   { label: 'Skills', sectionId: 'skills' },
   { label: 'Projects', sectionId: 'projects' },
   { label: 'Experience', sectionId: 'experience' },
-  { label: 'Certificates', sectionId: 'certificates' },
   { label: 'Contact', sectionId: 'contact' },
 ]

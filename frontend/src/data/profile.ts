@@ -1,54 +1,72 @@
 import type { EducationEntry } from '@/types/experience'
 
+export interface ProfileStat {
+  label: string
+  /** Numeric stats animate as a count-up; `null` renders `display` as a static badge instead. */
+  value: number | null
+  suffix?: string
+  display?: string
+}
+
 /**
- * PLACEHOLDER CONTENT — LinkedIn could not be accessed to pull real profile data.
- * Everything below is plausible sample content. Swap-in checklist: see PLACEHOLDER_CONTENT.md.
- * Real values already wired in: name, email, LinkedIn URL.
+ * All content is taken from the resume in public/resume/Abhishek_Rajput_Resume.pdf.
+ * Stat counts are derived from it (years, companies, projects listed). See PLACEHOLDER_CONTENT.md.
  */
 export const profile = {
   name: 'Abhishek Rajput',
   initials: 'AR',
-  location: 'Pune, India', // PLACEHOLDER
+  location: 'New Delhi, India',
   tagline:
-    'I build reliable backend systems and connect them to the physical world — from Spring Boot microservices to IoT devices on the factory floor.',
+    'Java developer with 3+ years of experience building robust, scalable backend applications with Spring Boot, Hibernate JPA, and RESTful APIs.',
   bio: [
-    "I'm a backend-focused software engineer specializing in Java and the Spring ecosystem, with a hands-on interest in IoT and embedded connectivity. I care about systems that stay boring in production — clear service boundaries, sensible defaults, and observability that tells you what actually broke.",
-    'Outside of typical CRUD-and-microservices work, I like connecting software to hardware: ESP8266 sensor nodes reporting over MQTT into a Spring Boot ingestion layer, dashboards that make raw telemetry legible. That mix of backend rigor and physical-world debugging is where I do my best work.',
-  ], // PLACEHOLDER narrative — replace with real bio
-  yearsExperience: 3, // PLACEHOLDER
-  currentRole: 'Backend Engineer', // PLACEHOLDER
-  currentCompany: 'TechNova Systems', // PLACEHOLDER
+    "I'm a results-oriented Java developer with 3+ years of hands-on experience building robust and scalable applications using Spring Boot, Hibernate JPA, and RESTful APIs. I'm currently an Application Engineer at Energasia Smart Poles, where I build backend microservices for an integrated Public Address audio system, a secure Jail Monitoring System, and the enterprise Energasia Portal — and connect Arduino-based edge hardware to cloud infrastructure.",
+    'Before this I worked on a hospital management backend at UST Global, built hotel booking and authentication services at 7Edge, and developed a property platform with role-based access control during my internship at NoBroker. I enjoy working with cross-functional teams to turn business requirements into clean, secure technical solutions.',
+  ],
+  yearsExperience: 3,
+  currentRole: 'Application Engineer',
+  currentCompany: 'Energasia Smart Poles Pvt. Ltd.',
   email: 'rupesh.ar33@gmail.com',
   socials: {
     github: 'https://github.com/abhishek-rajput', // PLACEHOLDER — confirm real handle
     linkedin: 'https://www.linkedin.com/in/abhishek-rajput-1b999a184/',
     email: 'mailto:rupesh.ar33@gmail.com',
   },
-  resumeUrl: '/resume/Abhishek_Rajput_Resume.pdf', // PLACEHOLDER file — see public/resume/
+  resumeUrl: '/resume/Abhishek_Rajput_Resume.pdf',
   roles: [
-    'Java Backend Engineer',
+    'Java Backend Developer',
+    'Application Engineer',
     'Spring Boot Developer',
     'Microservices Developer',
-    'IoT Engineer',
-    'Software Engineer',
-    'Cloud Enthusiast',
+    'REST API Developer',
+    'IoT Integration Engineer',
   ],
   stats: [
-    { label: 'Years of experience', value: '3+' },
-    { label: 'Production services shipped', value: '12+' },
-    { label: 'IoT devices deployed', value: '20+' },
-    { label: 'Core languages', value: 'Java · TS' },
-  ], // PLACEHOLDER
+    { label: 'Years experience', value: 3, suffix: '+' },
+    { label: 'Companies', value: 4 },
+    { label: 'Projects delivered', value: 6, suffix: '+' },
+    { label: 'Databases (MySQL, MongoDB)', value: 2 },
+    { label: 'Java versions', value: null, display: '8 & 17' },
+    { label: 'Problem solver', value: null, display: 'Always' },
+  ] satisfies ProfileStat[],
 }
 
 export const education: EducationEntry[] = [
   {
-    id: 'edu-1',
-    degree: 'B.Tech in Computer Science & Engineering', // PLACEHOLDER
-    institution: 'Your University Name', // PLACEHOLDER
+    id: 'edu-mca',
+    degree: 'Master of Computer Applications (MCA)',
+    institution: '', // PLACEHOLDER — add your university name
     location: 'India',
-    startDate: '2018',
+    startDate: '2020',
     endDate: '2022',
-    detail: 'Focus on distributed systems, embedded computing, and software engineering fundamentals.',
+    detail: 'Postgraduate study in software engineering, databases, and application development.',
+  },
+  {
+    id: 'edu-bca',
+    degree: 'Bachelor of Computer Applications (BCA)',
+    institution: 'IES College, Bhopal',
+    location: 'Bhopal, Madhya Pradesh, India',
+    startDate: '2017',
+    endDate: '2020',
+    detail: 'Foundation in programming, data structures, and core computer science.',
   },
 ]

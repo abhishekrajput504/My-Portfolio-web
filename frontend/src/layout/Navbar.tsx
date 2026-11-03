@@ -40,7 +40,7 @@ export function Navbar() {
           backdropFilter: scrolled ? undefined : 'none',
           WebkitBackdropFilter: scrolled ? undefined : 'none',
           borderBottom: scrolled ? undefined : '1px solid transparent',
-          transition: 'background-color 250ms ease, border-color 250ms ease',
+          transition: 'background-color 350ms ease, border-color 350ms ease, backdrop-filter 350ms ease',
         }}
       >
         <Container maxWidth="lg">
@@ -58,20 +58,43 @@ export function Navbar() {
             </Typography>
 
             <Stack direction="row" spacing={0.5} sx={{ display: { xs: 'none', md: 'flex' } }}>
-              {navLinks.map((link) => (
-                <Button
-                  key={link.sectionId}
-                  href={`/#${link.sectionId}`}
-                  onClick={(e) => handleNavClick(e, link.sectionId)}
-                  sx={{
-                    color: activeSection === link.sectionId ? 'text.primary' : 'text.secondary',
-                    fontWeight: 500,
-                    px: 2,
-                  }}
-                >
-                  {link.label}
-                </Button>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = activeSection === link.sectionId
+                return (
+                  <Button
+                    key={link.sectionId}
+                    href={`/#${link.sectionId}`}
+                    onClick={(e) => handleNavClick(e, link.sectionId)}
+                    disableRipple
+                    sx={{
+                      position: 'relative',
+                      color: isActive ? 'text.primary' : 'text.secondary',
+                      fontWeight: 500,
+                      px: 2,
+                      overflow: 'visible',
+                      '&:hover': { backgroundColor: 'transparent', color: 'text.primary' },
+                      '&::after': {
+                        content: '""',
+                        position: 'absolute',
+                        left: 16,
+                        right: 16,
+                        bottom: 8,
+                        height: '2px',
+                        borderRadius: '2px',
+                        backgroundColor: 'primary.main',
+                        transform: isActive ? 'scaleX(1)' : 'scaleX(0)',
+                        transformOrigin: 'left',
+                        transition: 'transform 250ms cubic-bezier(0.4, 0, 0.2, 1)',
+                      },
+                      '&:hover::after': {
+                        transform: 'scaleX(1)',
+                      },
+                    }}
+                  >
+                    {link.label}
+                  </Button>
+                )
+              })}
             </Stack>
 
             <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
